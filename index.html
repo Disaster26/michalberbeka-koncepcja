@@ -12,13 +12,15 @@
 <link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 1920w" imagesizes="100vw" media="(min-width:900px)" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/sserif-rdzen.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/inter-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/sserif-pl.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-pl.woff2" crossorigin>
 <style>
 @font-face{font-family:"Source Serif";font-weight:400 600;font-display:swap;src:url(fonts/sserif-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
 @font-face{font-family:"Source Serif";font-weight:400 600;font-display:swap;src:url(fonts/sserif-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
 @font-face{font-family:Inter;src:url(fonts/inter-rdzen.woff2) format("woff2");font-weight:400 700;font-display:swap;unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
 @font-face{font-family:Inter;src:url(fonts/inter-pl.woff2) format("woff2");font-weight:400 700;font-display:swap;unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
 @font-face{font-family:"Serif fb";src:local("Georgia");size-adjust:96%;ascent-override:92%;descent-override:26%}
-@font-face{font-family:"Inter fb";src:local("Arial");size-adjust:107%;ascent-override:90%}
+@font-face{font-family:"Inter fb";src:local("Arial");size-adjust:107.4%;ascent-override:90.2%;descent-override:22.5%;line-gap-override:0%}
 :root{--ink:#17120E;--mut:#4F4A45;--br:#89705A;--br2:#6F5845;--gold:#F8EAB1;--dark:#241B15;--dark2:#17110D;--g:#EEF0F2;--line:#D9DCE0;--hh:76px;--w:min(calc(100vw - 32px),1760px);--serif:"Source Serif","Serif fb",Georgia,serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
@@ -41,7 +43,7 @@ p{margin:0}
 /* naglowek */
 .top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
 .top.sc{border-color:var(--line);box-shadow:0 6px 20px rgba(23,18,14,.06)}
-.top .wrap{display:flex;align-items:center;gap:28px;height:var(--hh)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:calc(var(--hh) - 1px)}
 .logo{flex:none;display:block}
 .logo img{height:42px;width:auto}
 .menu{display:flex;align-items:center;gap:clamp(18px,1.7vw,36px);margin-left:auto;font-size:.95rem;font-weight:500}
@@ -263,7 +265,7 @@ footer .dol{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,2
 <a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Michał Berbeka - Kancelaria tłumacza przysięgłego, strona główna"><img src="img/logo.webp" width="560" height="91" alt="Michał Berbeka - Kancelaria tłumacza przysięgłego"></a>
+    <a class="logo" href="#" aria-label="Michał Berbeka - Kancelaria tłumacza przysięgłego, strona główna"><img src="img/logo.webp" srcset="img/logo-400.webp 400w, img/logo.webp 560w" sizes="(max-width:899px) 197px, 258px" width="560" height="91" alt="Michał Berbeka - Kancelaria tłumacza przysięgłego"></a>
     <nav class="menu" id="menu" aria-label="Menu główne">
       <a href="#uslugi">Tłumaczenia</a>
       <a href="#dokumenty">Dokumenty</a>
