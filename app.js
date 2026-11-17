@@ -10,7 +10,7 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
     links.forEach(function(l){var t=document.querySelector(l.getAttribute('href'));if(t)io.observe(t)});io.observe(document.getElementById('start'));
     var poCta=false,przyForm=false;function mb(){mob.classList.toggle('widac',poCta&&!przyForm)}
-    new IntersectionObserver(function(es){es.forEach(function(e){poCta=!e.isIntersecting&&e.boundingClientRect.top<0;mb()})}).observe(cta);
+    new IntersectionObserver(function(es){es.forEach(function(e){poCta=!e.isIntersecting&&e.boundingClientRect.top<0;top.classList.toggle('po',!e.isIntersecting);mb()})}).observe(cta);
     new IntersectionObserver(function(es){es.forEach(function(e){przyForm=e.isIntersecting;mb()})},{threshold:.15}).observe(document.getElementById('form'));
     var m=document.getElementById('mapa');
     var mo=new IntersectionObserver(function(es){if(es[0].isIntersecting){var f=document.createElement('iframe');f.src=m.dataset.src;f.title='Mapa: Nysa';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';m.appendChild(f);mo.disconnect()}},{rootMargin:'300px'});mo.observe(m);
